@@ -1,0 +1,23 @@
+language: bash
+
+services: docker
+
+env:
+  - VERSION=7.3 VARIANT=alpine
+
+before_script:
+  - env | sort
+  - cd "$VERSION/$VARIANT"
+  - slash='/'; image="mihard/php-with-unit:${VERSION}-${VARIANT}"
+
+script:
+  - |
+    (
+      set -Eeuo pipefail
+      set -x
+      docker build -t "$image" .
+      ~/official-images/test/run.sh "$image"
+    )
+
+after_script:
+  - docker images

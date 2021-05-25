@@ -9,6 +9,7 @@ ENV PHPIZE_DEPS \
 		libc-dev \
 		make \
 		pkgconf \
+		pcre2-dev \
 		re2c
 
 RUN apk add --no-cache --virtual .persistent-deps \

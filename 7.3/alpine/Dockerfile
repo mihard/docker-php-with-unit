@@ -155,7 +155,7 @@ RUN set -xe \
 COPY docker-php-ext-* /usr/local/bin/
 RUN docker-php-ext-enable sodium
 
-ENV UNIT_URL="https://unit.nginx.org/download/unit-1.9.0.tar.gz"
+ENV UNIT_URL="https://unit.nginx.org/download/unit-1.23.0.tar.gz"
 
 RUN set -xe; \
 	\

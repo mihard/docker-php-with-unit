@@ -6,7 +6,7 @@ env:
   - VERSION=7.3 VARIANT=alpine
 
 before_script:
-  - echo "${DHTOKEN}" > docker login -u "${DHUSER}" --password-stdin
+  - echo "${DHTOKEN}" | docker login -u "${DHUSER}" --password-stdin
   - env | sort
   - cd "$VERSION/$VARIANT"
   - slash='/'; image="mihard/php-with-unit:${VERSION}-${VARIANT}"

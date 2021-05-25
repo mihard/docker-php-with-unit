@@ -41,7 +41,7 @@ ENV GPG_KEYS CBAF69F173A0FEA4B537F470D66C9593118BCCB6 F38252826ACD957EF380D39F2F
 
 ENV PHP_VERSION 7.3.28
 ENV PHP_URL="https://www.php.net/distributions/php-7.3.28.tar.xz" PHP_ASC_URL="https://www.php.net/distributions/php-7.3.28.tar.xz.asc"
-ENV PHP_SHA256="4007f24a39822bef2805b75c625551d30be9eeed329d52eb0838fa5c1b91c1fd" PHP_MD5=""
+ENV PHP_SHA256="a2a84dbec8c1eee3f46c5f249eaaa2ecb3f9e7a6f5d0604d2df44ff8d4904dbe" PHP_MD5=""
 
 RUN set -xe; \
 	\
